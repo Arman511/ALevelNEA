@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/168707__qubodup__tank-firing.wav-61eafa186f4c47acdace2d005bfe60ba.sample"
+
+[deps]
+
+source_file="res://Music/168707__qubodup__tank-firing.wav"
+dest_files=[ "res://.import/168707__qubodup__tank-firing.wav-61eafa186f4c47acdace2d005bfe60ba.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

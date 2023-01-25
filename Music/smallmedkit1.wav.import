@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/smallmedkit1.wav-ea54b30c395072e085efb4fb6e62b637.sample"
+
+[deps]
+
+source_file="res://Music/smallmedkit1.wav"
+dest_files=[ "res://.import/smallmedkit1.wav-ea54b30c395072e085efb4fb6e62b637.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

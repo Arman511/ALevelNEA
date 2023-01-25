@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/H.mp3-1ea7cc68ba272e7ab4b7c53515f4488b.mp3str"
+
+[deps]
+
+source_file="res://Music/control/H.mp3"
+dest_files=[ "res://.import/H.mp3-1ea7cc68ba272e7ab4b7c53515f4488b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

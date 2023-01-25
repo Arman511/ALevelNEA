@@ -1,0 +1,176 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Settings.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_top = -0.00048818
+anchor_right = 1.0
+anchor_bottom = 0.999512
+margin_top = 0.527234
+margin_right = -896.0
+margin_bottom = -479.473
+rect_scale = Vector2( 1.87501, 1.80002 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sens" type="HSlider" parent="."]
+margin_left = 660.053
+margin_top = 235.0
+margin_right = 980.053
+margin_bottom = 267.0
+min_value = 0.5
+max_value = 4.0
+step = 0.5
+value = 1.0
+tick_count = 4
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sens"]
+margin_left = 3.0
+margin_top = -25.0
+margin_right = 300.0
+margin_bottom = -10.9997
+text = "Sensativity of Turret, Currently:"
+
+[node name="Fullscreen" type="Button" parent="."]
+anchor_top = 0.00048823
+anchor_bottom = 0.00048823
+margin_left = 57.619
+margin_top = 275.707
+margin_right = 217.619
+margin_bottom = 295.707
+rect_scale = Vector2( 2, 3 )
+text = "Toggle fullscreen"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reset" type="Button" parent="."]
+anchor_top = 0.00048823
+anchor_bottom = 0.00048823
+margin_left = 57.619
+margin_top = 339.707
+margin_right = 217.619
+margin_bottom = 359.707
+rect_scale = Vector2( 2, 3 )
+text = "Reset account data"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete" type="Button" parent="."]
+margin_left = 57.619
+margin_top = 404.0
+margin_right = 217.619
+margin_bottom = 424.0
+rect_scale = Vector2( 2, 3 )
+text = "Delete account"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="."]
+margin_left = 57.619
+margin_top = 467.707
+margin_right = 217.619
+margin_bottom = 487.707
+rect_scale = Vector2( 2, 3 )
+text = "Save and Back to Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vol" type="HSlider" parent="."]
+margin_left = 57.619
+margin_top = 235.0
+margin_right = 377.619
+margin_bottom = 267.0
+max_value = 1.0
+step = 0.01
+tick_count = 100
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Vol"]
+margin_left = 3.0
+margin_top = -25.0
+margin_right = 300.0
+margin_bottom = -10.9997
+text = "Volume is currently:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Colour" type="OptionButton" parent="."]
+margin_left = 660.0
+margin_top = 280.0
+margin_right = 980.0
+margin_bottom = 328.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Movement" type="OptionButton" parent="."]
+margin_left = 660.0
+margin_top = 329.0
+margin_right = 980.0
+margin_bottom = 376.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fire" type="OptionButton" parent="."]
+margin_left = 660.0
+margin_top = 376.0
+margin_right = 980.0
+margin_bottom = 424.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hook" type="OptionButton" parent="."]
+margin_left = 660.0
+margin_top = 424.0
+margin_right = 980.0
+margin_bottom = 472.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hud" type="OptionButton" parent="."]
+margin_left = 660.053
+margin_top = 472.0
+margin_right = 980.053
+margin_bottom = 520.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Res" type="ConfirmationDialog" parent="."]
+visible = true
+margin_left = 424.369
+margin_top = 282.0
+margin_right = 624.369
+margin_bottom = 357.0
+dialog_text = "Are you sure you want to reset"
+dialog_autowrap = true
+
+[connection signal="value_changed" from="Sens" to="." method="_on_Sens_value_changed"]
+[connection signal="pressed" from="Fullscreen" to="." method="_on_Fullscreen_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_Reset_pressed"]
+[connection signal="pressed" from="Delete" to="." method="_on_Delete_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
+[connection signal="value_changed" from="Vol" to="." method="_on_Vol_value_changed"]
+[connection signal="item_selected" from="Colour" to="." method="_on_Colour_item_selected"]
+[connection signal="item_selected" from="Movement" to="." method="_on_Movement_item_selected"]
+[connection signal="item_selected" from="Fire" to="." method="_on_Fire_item_selected"]
+[connection signal="item_selected" from="Hook" to="." method="_on_Hook_item_selected"]
+[connection signal="item_selected" from="Hud" to="." method="_on_Hud_item_selected"]
+[connection signal="confirmed" from="Res" to="." method="_on_Res_confirmed"]
