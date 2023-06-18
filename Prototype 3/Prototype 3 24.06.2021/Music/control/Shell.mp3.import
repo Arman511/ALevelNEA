@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Shell.mp3-7ebacf505fdd954039ae3004ae0aa3da.mp3str"
+
+[deps]
+
+source_file="res://Music/control/Shell.mp3"
+dest_files=[ "res://.import/Shell.mp3-7ebacf505fdd954039ae3004ae0aa3da.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

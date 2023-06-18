@@ -1,0 +1,220 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Roboto-Light.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 37
+outline_size = 1
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -896.0
+margin_bottom = -480.0
+rect_scale = Vector2( 1.8751, 1.80029 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Game" type="Button" parent="."]
+self_modulate = Color( 1, 0, 0, 1 )
+margin_left = 183.457
+margin_top = 195.524
+margin_right = 343.457
+margin_bottom = 231.524
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Game"]
+margin_left = 45.8427
+margin_top = 10.3932
+margin_right = 113.843
+margin_bottom = 24.3932
+text = "Start game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shop" type="Button" parent="."]
+self_modulate = Color( 0, 1, 0.137255, 1 )
+margin_left = 183.457
+margin_top = 231.524
+margin_right = 343.457
+margin_bottom = 267.524
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Shop"]
+margin_left = 45.8427
+margin_top = 11.9693
+margin_right = 115.843
+margin_bottom = 25.9693
+text = "Open Shop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scores" type="Button" parent="."]
+self_modulate = Color( 0.992157, 1, 0, 1 )
+margin_left = 183.457
+margin_top = 267.524
+margin_right = 343.457
+margin_bottom = 303.524
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Scores"]
+margin_left = 39.543
+margin_top = 10.7093
+margin_right = 118.543
+margin_bottom = 24.7093
+rect_pivot_offset = Vector2( 74.2624, 11.8875 )
+text = "Show scores"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls" type="Button" parent="."]
+self_modulate = Color( 1, 0, 0.866667, 1 )
+margin_left = 644.232
+margin_top = 195.524
+margin_right = 804.232
+margin_bottom = 231.524
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Controls"]
+margin_left = 54.2538
+margin_top = 10.3932
+margin_right = 107.254
+margin_bottom = 24.3932
+text = "Controls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Button" parent="."]
+self_modulate = Color( 0.47451, 0.47451, 0.47451, 1 )
+margin_left = 644.232
+margin_top = 231.524
+margin_right = 804.232
+margin_bottom = 267.524
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Credits"]
+margin_left = 54.2538
+margin_top = 11.9693
+margin_right = 99.2538
+margin_bottom = 25.9693
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lore" type="Button" parent="."]
+self_modulate = Color( 0, 1, 0.952941, 1 )
+margin_left = 644.232
+margin_top = 267.524
+margin_right = 804.232
+margin_bottom = 303.524
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Lore"]
+margin_left = 63.4461
+margin_top = 10.7093
+margin_right = 103.446
+margin_bottom = 24.7093
+text = "Lore"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Button" parent="."]
+margin_left = 418.111
+margin_top = 391.048
+margin_right = 578.111
+margin_bottom = 427.048
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logout" type="Button" parent="."]
+margin_left = 418.111
+margin_top = 427.048
+margin_right = 578.111
+margin_bottom = 463.048
+text = "Logout"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 418.111
+margin_top = 463.048
+margin_right = 578.111
+margin_bottom = 499.048
+text = "Quit Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Money" type="RichTextLabel" parent="."]
+margin_left = 71.5803
+margin_top = 46.0284
+margin_right = 199.58
+margin_bottom = 91.0284
+text = "Total Cash:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+modulate = Color( 0.054902, 0, 1, 1 )
+margin_left = 400.0
+margin_top = 42.0
+margin_right = 616.0
+margin_bottom = 87.0
+custom_fonts/font = SubResource( 1 )
+text = "Tank Shooter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Change" type="ConfirmationDialog" parent="."]
+visible = true
+margin_left = 354.114
+margin_top = 205.917
+margin_right = 636.114
+margin_bottom = 312.917
+popup_exclusive = true
+window_title = ""
+resizable = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Game" to="." method="_on_Game_pressed"]
+[connection signal="pressed" from="Shop" to="." method="_on_Shop_pressed"]
+[connection signal="pressed" from="Scores" to="." method="_on_Scores_pressed"]
+[connection signal="pressed" from="Controls" to="." method="_on_Controls_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="Lore" to="." method="_on_Lore_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="Logout" to="." method="_on_Logout_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[connection signal="confirmed" from="Change" to="." method="_on_Change_confirmed"]
+[connection signal="popup_hide" from="Change" to="." method="_on_Change_popup_hide"]

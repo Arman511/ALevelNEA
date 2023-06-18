@@ -1,0 +1,137 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Roboto-Light.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 37
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Money" type="RichTextLabel" parent="."]
+margin_left = 159.681
+margin_top = 100.0
+margin_right = 287.681
+margin_bottom = 145.0
+text = "Total Cash:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label1" type="Label" parent="."]
+margin_left = 451.822
+margin_top = 489.255
+margin_right = 587.822
+margin_bottom = 544.255
+custom_fonts/font = SubResource( 1 )
+text = "Goodbye"
+align = 1
+valign = 1
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 433.414
+margin_top = 462.194
+margin_right = 593.414
+margin_bottom = 498.194
+text = "Quit Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Button" parent="."]
+margin_left = 433.414
+margin_top = 426.193
+margin_right = 593.414
+margin_bottom = 462.193
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shop" type="Button" parent="."]
+margin_left = 434.255
+margin_top = 281.139
+margin_right = 594.255
+margin_bottom = 317.139
+text = "Open Shop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls" type="Button" parent="."]
+margin_left = 434.255
+margin_top = 317.054
+margin_right = 594.255
+margin_bottom = 353.054
+text = "Controls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Button" parent="."]
+margin_left = 433.414
+margin_top = 353.44
+margin_right = 593.414
+margin_bottom = 389.44
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game" type="Button" parent="."]
+margin_left = 434.255
+margin_top = 209.599
+margin_right = 594.255
+margin_bottom = 245.599
+text = "Start Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scores" type="Button" parent="."]
+margin_left = 434.255
+margin_top = 245.319
+margin_right = 594.255
+margin_bottom = 281.319
+text = "Show scores"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lore" type="Button" parent="."]
+margin_left = 433.414
+margin_top = 390.292
+margin_right = 593.414
+margin_bottom = 426.292
+text = "Lore"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 271.681
+margin_top = 161.0
+margin_right = 769.681
+margin_bottom = 206.0
+custom_fonts/font = SubResource( 2 )
+text = "Tank Shooter by Arman Shaikh"
+
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="Shop" to="." method="_on_Shop_pressed"]
+[connection signal="pressed" from="Controls" to="." method="_on_Controls_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="Game" to="." method="_on_Game_pressed"]
+[connection signal="pressed" from="Scores" to="." method="_on_Scores_pressed"]
+[connection signal="pressed" from="Lore" to="." method="_on_Lore_pressed"]

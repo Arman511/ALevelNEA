@@ -1,0 +1,129 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Assets/Sprites/Pixilart Sprite Sheet.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Player.gd" type="Script" id=2]
+[ext_resource path="res://Music/168707__qubodup__tank-firing.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Sprites/explosion5.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/explosion1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/explosion4.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/explosion2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/explosion3.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Brown-removebg-preview.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Grey-removebg-preview.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Red2.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Green1.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Purple-removebg-preview.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Blue1.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Black1-removebg-preview.png" type="Texture" id=16]
+[ext_resource path="res://Assets/White-removebg-preview.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Orange-removebg-preview.png" type="Texture" id=24]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 10 ), ExtResource( 17 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 24 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "blow",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 500, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 600, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 700, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 800, 0, 100, 100 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Tank" type="KinematicBody2D" parent="."]
+position = Vector2( 990, 600 )
+rotation = -1.5708
+collision_layer = 4
+collision_mask = 20
+script = ExtResource( 2 )
+
+[node name="Tank_dark" type="AnimatedSprite" parent="Tank"]
+pause_mode = 2
+rotation = -1.5708
+scale = Vector2( 0.75, 0.75 )
+frames = SubResource( 1 )
+frame = 4
+
+[node name="Scope" type="AnimatedSprite" parent="Tank"]
+modulate = Color( 1, 0.960938, 0.960938, 1 )
+position = Vector2( 187.5, -0.610352 )
+rotation = -1.5708
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 11 )
+offset = Vector2( -0.492523, 0 )
+
+[node name="Muzzle" type="Position2D" parent="Tank"]
+position = Vector2( 23.8106, -0.610962 )
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+
+[node name="SFXFire" type="AudioStreamPlayer" parent="Tank"]
+stream = ExtResource( 3 )
+
+[node name="Blue" type="CollisionPolygon2D" parent="Tank"]
+polygon = PoolVector2Array( 63.6066, -49.564, 63.7245, -29.3887, 63.4885, -27.383, 62.4266, -26.0851, 61.1288, -25.1413, 59.831, -24.5514, 57.3533, -23.8435, 55.5835, -23.8435, 52.3979, -23.4895, 48.9764, -23.6075, 46.3808, -23.4896, 45.2009, -22.3097, 44.257, -20.422, 42.9592, -19.2421, 42.0153, -18.5342, 39.7736, -17.1184, 36.1161, -16.4105, 32.9305, -16.2926, 27.2673, -16.4106, 23.8457, -16.5286, 21.2501, -16.2926, 23.9637, -14.4048, 24.6716, -12.0452, 25.6154, -9.80347, 27.0313, -7.20776, 27.2672, -5.32004, 27.6212, -4.61212, 41.4254, -4.61209, 41.5433, 5.65259, 28.2111, 5.77051, 27.6211, 8.95605, 26.6772, 10.6078, 25.2614, 12.7316, 24.6715, 14.1474, 23.1377, 16.1531, 22.0758, 17.215, 27.1492, 17.097, 33.0484, 17.215, 37.0598, 17.097, 39.6555, 18.0409, 42.2512, 19.6927, 43.9029, 21.9344, 44.3748, 22.9963, 53.1057, 23.1143, 58.179, 23.2323, 61.9545, 24.6481, 63.7243, 28.0696, 64.0781, 50.4867, 62.6623, 53.2003, 59.4767, 55.442, 56.2911, 56.5038, -29.6014, 56.8574, -58.8753, 56.6214, -61.235, 55.0876, -63.5947, 53.0818, -64.3025, 24.0577, -61.3529, 19.6923, -57.9567, 16.7925, -61.1169, 10.8435, -62.6506, 3.17444, -62.6506, -5.08438, -60.0549, -12.7534, -56.9873, -17.0008, -61.2347, -19.2425, -63.9484, -23.6079, -63.9483, -51.6882, -62.0605, -55.1097, -52.9757, -56.7615, 7.3017, -56.0791, 56.8191, -55.7982, 60.0462, -54.3951, 62.4314, -52.5711 )
+
+[node name="Red" type="CollisionPolygon2D" parent="Tank"]
+polygon = PoolVector2Array( 59.3326, -23.2539, 55.5868, -20.2573, 52.9648, -15.9496, 52.7774, 14.7656, 54.8375, 19.8224, 60.0816, 23.1937, 60.8306, 47.7284, 58.2086, 50.1632, 54.8374, 51.8487, -56.5992, 52.4102, -59.7831, 49.4136, -60.3449, 24.1297, -56.2245, 20.3839, -51.3549, 12.3305, -54.1642, 2.77881, -52.6659, -11.2678, -51.1676, -12.9534, -55.6624, -19.8831, -59.9701, -24.3781, -59.4081, -50.4111, -55.8496, -53.0331, 55.3996, -52.6582, 59.8945, -48.7251 )
+
+[node name="Green" type="CollisionPolygon2D" parent="Tank"]
+position = Vector2( 23.8106, -0.610901 )
+polygon = PoolVector2Array( 57.2478, -8.92365, 57.8424, -1.63974, 57.8424, 5.94147, 57.5451, 7.27936, 64.5316, 10.8469, 69.7344, 17.239, 70.4776, 23.7796, 73.0047, 24.8202, 74.3157, 25.4413, 75.2521, 32.1837, 75.4393, 52.0363, 73.7537, 55.0329, 69.6334, 56.7184, -65.5888, 56.718, -68.7727, 55.0323, -71.0202, 52.4103, -71.7693, 31.6213, -74.7659, 27.8755, -75.7023, 20.0094, -73.0802, 13.6416, -71.9565, 12.8925, -73.4548, 5.58826, -73.4547, -9.20755, -71.9564, -14.2643, -74.953, -18.7593, -75.7021, -28.1237, -72.7055, -31.3076, -72.5181, -53.0331, -67.8359, -56.2169, 67.9482, -56.9656, 73.005, -54.9054, 75.2524, -52.0961, 75.4396, -27.5613, 72.443, -24.5647, 70.9447, -24.0028, 69.8209, -19.8825, 66.637, -12.7656 )
+
+[connection signal="animation_finished" from="Tank/Tank_dark" to="Tank" method="_on_Tank_dark_animation_finished"]

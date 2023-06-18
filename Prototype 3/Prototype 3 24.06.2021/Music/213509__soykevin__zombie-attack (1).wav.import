@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/213509__soykevin__zombie-attack (1).wav-61a49fe8d27b18a016a4a733f4a9f9af.sample"
+
+[deps]
+
+source_file="res://Music/213509__soykevin__zombie-attack (1).wav"
+dest_files=[ "res://.import/213509__soykevin__zombie-attack (1).wav-61a49fe8d27b18a016a4a733f4a9f9af.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

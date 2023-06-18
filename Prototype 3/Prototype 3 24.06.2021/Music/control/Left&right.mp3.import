@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Left&right.mp3-2c649306d50d3675089660cdecc3ac39.mp3str"
+
+[deps]
+
+source_file="res://Music/control/Left&right.mp3"
+dest_files=[ "res://.import/Left&right.mp3-2c649306d50d3675089660cdecc3ac39.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

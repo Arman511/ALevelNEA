@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Credits.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Roboto-Light.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/102-1021733_clip-art-blank-world-map-world-map-outline (1).png" type="Texture" id=3]
+[ext_resource path="res://Assets/DroidSans.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/22-224913_soldier-saluting-salute-man-person-general-military-clipart (1).png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 37
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 4 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 457.376, 608.379 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+margin_left = 553.938
+margin_top = 452.092
+margin_right = 755.938
+margin_bottom = 516.092
+text = "Back to menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 270.621
+margin_top = 49.7564
+margin_right = 768.622
+margin_bottom = 94.7564
+custom_fonts/font = SubResource( 1 )
+text = "Tank Shooter by Arman Shaikh"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 188.09
+margin_top = 109.515
+margin_right = 809.09
+margin_bottom = 450.515
+custom_fonts/font = SubResource( 2 )
+text = "Your world has fallen to the zombie incursion. 
+They have overtaken the world however their are holdouts spotted around the globe.
+You however were just an unfortunate sap who was trapped in a broken tank whose engine doesn't work. you however were fortunate that its turret works, so your job is to mow down as many zombies as you can. You get the occasional supply drop but you don't hold hope th!ey are struggling too.
+So do your job soldier  for humanity!
+Ad hominem!
+"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="22-224913_soldier-saluting-salute-man-person-general-military-clipart (1)" type="Sprite" parent="Label2"]
+position = Vector2( 712.212, 204.039 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 5 )
+
+[node name="102-1021733_clip-art-blank-world-map-world-map-outline (1)" type="Sprite" parent="."]
+position = Vector2( 214.158, 399.976 )
+scale = Vector2( 0.42969, 0.516812 )
+texture = ExtResource( 3 )
+
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

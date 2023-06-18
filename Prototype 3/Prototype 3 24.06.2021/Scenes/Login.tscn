@@ -1,0 +1,117 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Login.gd" type="Script" id=2]
+[ext_resource path="res://Assets/DroidSans.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 19
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 56
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -896.0
+margin_bottom = -480.0
+rect_scale = Vector2( 1.87497, 1.80006 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Userbox" type="LineEdit" parent="."]
+margin_left = 408.0
+margin_top = 280.0
+margin_right = 552.0
+margin_bottom = 304.0
+placeholder_text = "Username"
+placeholder_alpha = 0.7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Passbox" type="LineEdit" parent="."]
+margin_left = 408.0
+margin_top = 312.0
+margin_right = 552.0
+margin_bottom = 336.0
+secret = true
+placeholder_text = "Password"
+placeholder_alpha = 0.7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Log" type="Button" parent="."]
+margin_left = 437.413
+margin_top = 353.0
+margin_right = 535.413
+margin_bottom = 373.0
+text = "Login"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reg" type="Button" parent="."]
+margin_left = 437.413
+margin_top = 389.564
+margin_right = 537.413
+margin_bottom = 409.564
+text = "Register"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 437.413
+margin_top = 424.373
+margin_right = 537.413
+margin_bottom = 444.373
+text = "Quit Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Incorrect" type="Label" parent="."]
+margin_left = 304.0
+margin_top = 472.0
+margin_right = 466.0
+margin_bottom = 547.0
+custom_fonts/font = SubResource( 1 )
+text = "Incorrect username and or password"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoggedIn" type="Label" parent="."]
+margin_left = 536.0
+margin_top = 480.0
+margin_right = 698.0
+margin_bottom = 543.0
+custom_fonts/font = SubResource( 1 )
+text = "Logged in"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 300.0
+margin_top = 40.0
+margin_right = 704.0
+margin_bottom = 106.0
+custom_fonts/font = SubResource( 2 )
+text = "Tank Shooter"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Log" to="." method="_on_Log_pressed"]
+[connection signal="pressed" from="Reg" to="." method="_on_Reg_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

@@ -1,0 +1,107 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Scenes/Controls.gd" type="Script" id=1]
+[ext_resource path="res://Assets/DroidSans.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Music/control/Left&right.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Music/control/A&D.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Music/control/F.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Music/control/Shell.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Music/control/H.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Music/control/Space.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Music/control/lClick.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Music/control/mouse.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Music/control/R.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Music/control/screen.mp3" type="AudioStream" id=12]
+[ext_resource path="res://Music/control/Shift.mp3" type="AudioStream" id=13]
+[ext_resource path="res://Music/control/rClick.mp3" type="AudioStream" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 51
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stuff" type="RichTextLabel" parent="."]
+margin_left = 609.368
+margin_top = 539.054
+margin_right = 1078.37
+margin_bottom = 716.054
+rect_scale = Vector2( 1.76544, 1.96236 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="Label" parent="."]
+margin_left = 725.013
+margin_top = 64.3741
+margin_right = 917.013
+margin_bottom = 125.374
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 1 )
+text = "Controls"
+
+[node name="Menu" type="Button" parent="."]
+margin_left = 725.013
+margin_top = 905.366
+margin_right = 859.013
+margin_bottom = 947.366
+rect_scale = Vector2( 3, 3 )
+text = "Back to Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lr" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Ad" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Mouse" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="Rk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="Space" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="Fk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="ClickL" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="Hk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="Shift" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+
+[node name="ClickR" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[node name="Shell" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="Screen" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
+[connection signal="finished" from="Lr" to="." method="_Rotate_Finished"]
+[connection signal="finished" from="Ad" to="." method="_Rotate_Finished"]
+[connection signal="finished" from="Mouse" to="." method="_Rotate_Finished"]
+[connection signal="finished" from="Rk" to="." method="_Fire_Finished"]
+[connection signal="finished" from="Space" to="." method="_Fire_Finished"]
+[connection signal="finished" from="Fk" to="." method="_Fire_Finished"]
+[connection signal="finished" from="ClickL" to="." method="_Fire_Finished"]
+[connection signal="finished" from="Hk" to="." method="_Hook_Finished"]
+[connection signal="finished" from="Shift" to="." method="_Hook_Finished"]
+[connection signal="finished" from="ClickR" to="." method="_Hook_Finished"]
+[connection signal="finished" from="Shell" to="." method="_on_Shell_finished"]

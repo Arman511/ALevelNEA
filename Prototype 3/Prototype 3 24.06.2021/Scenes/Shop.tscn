@@ -1,0 +1,158 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Shop.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Assets/Roboto-Light.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 39
+outline_size = 1
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 29
+font_data = SubResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -896.0
+margin_bottom = -480.0
+rect_scale = Vector2( 1.87503, 1.80004 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 248.0
+margin_top = 27.0
+margin_right = 771.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 2 )
+text = "Tank Shooter"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AmmoMax" type="Button" parent="."]
+margin_left = 450.0
+margin_top = 323.0
+margin_right = 680.0
+margin_bottom = 398.0
+text = "Upgrade Max ammo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ammokit" type="Button" parent="."]
+margin_left = 450.0
+margin_top = 411.0
+margin_right = 680.0
+margin_bottom = 486.0
+text = "Upgarde Ammokit regen amount"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HP" type="Button" parent="."]
+margin_left = 451.0
+margin_top = 148.0
+margin_right = 681.0
+margin_bottom = 223.0
+text = "Upgrade Max HP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MedKit" type="Button" parent="."]
+margin_left = 450.0
+margin_top = 235.0
+margin_right = 680.0
+margin_bottom = 310.0
+text = "Upgrade Medkit regen amount"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Money" type="RichTextLabel" parent="."]
+margin_left = 52.0
+margin_top = 27.0
+margin_right = 966.0
+margin_bottom = 45.0
+text = "Current Cash:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hp" type="RichTextLabel" parent="."]
+margin_left = 248.0
+margin_top = 160.0
+margin_right = 432.0
+margin_bottom = 219.0
+text = "Currently:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Med" type="RichTextLabel" parent="."]
+margin_left = 248.0
+margin_top = 248.0
+margin_right = 436.0
+margin_bottom = 306.0
+text = "Currently:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ammo" type="RichTextLabel" parent="."]
+margin_left = 248.0
+margin_top = 336.0
+margin_right = 432.0
+margin_bottom = 399.0
+text = "Currently"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Kit" type="RichTextLabel" parent="."]
+margin_left = 248.0
+margin_top = 424.0
+margin_right = 433.0
+margin_bottom = 490.0
+rect_pivot_offset = Vector2( -133, -366 )
+text = "Currently:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NotEnough" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 305.0
+margin_top = 89.0
+margin_right = 724.0
+margin_bottom = 131.0
+custom_fonts/normal_font = SubResource( 3 )
+text = "Not enough Cash for purchase"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="."]
+margin_left = 496.0
+margin_top = 512.0
+margin_right = 634.0
+margin_bottom = 568.0
+text = "Back to Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="AmmoMax" to="." method="_on_AmmoMax_pressed"]
+[connection signal="pressed" from="Ammokit" to="." method="_on_Ammokit_pressed"]
+[connection signal="pressed" from="HP" to="." method="_on_HP_pressed"]
+[connection signal="pressed" from="MedKit" to="." method="_on_MedKit_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
