@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Controls.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stuff" type="RichTextLabel" parent="."]
+margin_left = 275.923
+margin_top = 157.0
+margin_right = 738.923
+margin_bottom = 431.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="Label" parent="."]
+margin_left = 272.0
+margin_top = 32.0
+margin_right = 325.0
+margin_bottom = 47.0
+rect_scale = Vector2( 9, 8.5 )
+text = "Controls"
+
+[node name="Menu" type="Button" parent="."]
+margin_left = 344.0
+margin_top = 464.0
+margin_right = 478.0
+margin_bottom = 506.0
+rect_scale = Vector2( 2.58221, 1.9336 )
+text = "Back to Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]

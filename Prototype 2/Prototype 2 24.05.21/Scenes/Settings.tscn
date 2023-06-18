@@ -1,0 +1,126 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Settings.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_top = -0.00048818
+anchor_right = 1.0
+anchor_bottom = 0.999512
+margin_top = 0.292908
+margin_bottom = 0.292908
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sens" type="HSlider" parent="."]
+margin_left = 310.0
+margin_top = 105.0
+margin_right = 630.0
+margin_bottom = 136.0
+min_value = 0.5
+max_value = 4.0
+step = 0.5
+value = 1.0
+tick_count = 4
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sens"]
+margin_left = 3.0
+margin_top = -25.0
+margin_right = 300.0
+margin_bottom = -10.9997
+text = "Sensativity of Turret, Currently:"
+
+[node name="Vol" type="HSlider" parent="."]
+margin_left = 311.0
+margin_top = 178.0
+margin_right = 631.0
+margin_bottom = 209.0
+value = 1.0
+tick_count = 4
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Vol"]
+margin_left = 3.0
+margin_top = -25.0
+margin_right = 300.0
+margin_bottom = -10.9997
+text = "Volume is currently:"
+
+[node name="Reset" type="Button" parent="."]
+anchor_top = 0.00048823
+anchor_bottom = 0.00048823
+margin_left = 128.0
+margin_top = 263.707
+margin_right = 288.0
+margin_bottom = 283.707
+rect_scale = Vector2( 2, 3 )
+text = "Reset account data"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete" type="Button" parent="."]
+margin_left = 128.0
+margin_top = 364.707
+margin_right = 288.0
+margin_bottom = 384.707
+rect_scale = Vector2( 2, 3 )
+text = "Delete account"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hud" type="OptionButton" parent="."]
+margin_left = 552.0
+margin_top = 295.707
+margin_right = 852.0
+margin_bottom = 365.707
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Movement" type="OptionButton" parent="."]
+margin_left = 552.0
+margin_top = 367.707
+margin_right = 852.0
+margin_bottom = 437.707
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fire" type="OptionButton" parent="."]
+margin_left = 552.0
+margin_top = 439.707
+margin_right = 852.0
+margin_bottom = 509.707
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="."]
+margin_left = 128.0
+margin_top = 471.707
+margin_right = 288.0
+margin_bottom = 491.707
+rect_scale = Vector2( 2, 3 )
+text = "Save and Back to Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="value_changed" from="Sens" to="." method="_on_Sens_value_changed"]
+[connection signal="value_changed" from="Vol" to="." method="_on_Vol_value_changed"]
+[connection signal="pressed" from="Reset" to="." method="_on_Reset_pressed"]
+[connection signal="pressed" from="Delete" to="." method="_on_Delete_pressed"]
+[connection signal="item_selected" from="Hud" to="." method="_on_Hud_item_selected"]
+[connection signal="item_selected" from="Movement" to="." method="_on_Movement_item_selected"]
+[connection signal="item_selected" from="Fire" to="." method="_on_Fire_item_selected"]
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]

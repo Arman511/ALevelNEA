@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Black.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/tank_dark.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/bulletDark1.png" type="Texture" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+scale = Vector2( 0.313726, 0.245098 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tank_dark" type="Sprite" parent="Background"]
+position = Vector2( -1293.36, 884.34 )
+rotation = 0.785398
+scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+
+[node name="bulletDark1" type="Sprite" parent="Background/tank_dark"]
+position = Vector2( -1.00974, -43.2749 )
+texture = ExtResource( 4 )
+
+[node name="tank_dark2" type="Sprite" parent="Background"]
+position = Vector2( 1303.17, 894.844 )
+rotation = -0.785398
+scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+
+[node name="bulletDark1" type="Sprite" parent="Background/tank_dark2"]
+position = Vector2( 2.8622, -42.908 )
+texture = ExtResource( 4 )

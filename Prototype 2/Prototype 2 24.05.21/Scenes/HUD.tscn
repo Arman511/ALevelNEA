@@ -1,0 +1,150 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/HUD.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Black.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/red.jpg" type="Texture" id=3]
+[ext_resource path="res://Assets/Roboto-Light.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 4 )
+
+[node name="Control" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, -1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProHUDAmmo" type="TextureProgress" parent="."]
+margin_left = 625.0
+margin_top = 85.0
+margin_right = 900.0
+margin_bottom = 130.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ProHUDAmmo"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Current Ammo: "
+
+[node name="ProHUDHP" type="TextureProgress" parent="."]
+margin_left = 80.0
+margin_top = 85.0
+margin_right = 355.0
+margin_bottom = 130.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ProHUDHP"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Current Health: "
+
+[node name="Hud" type="Label" parent="."]
+margin_left = 40.6432
+margin_top = 39.0109
+margin_right = 826.643
+margin_bottom = 61.0109
+rect_scale = Vector2( 1.14286, 1.3125 )
+
+[node name="Pause" type="Button" parent="."]
+margin_left = 900.0
+margin_top = 32.0
+margin_right = 1007.0
+margin_bottom = 61.0
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Unpause" type="Button" parent="."]
+visible = false
+margin_left = 359.398
+margin_top = 248.934
+margin_right = 645.398
+margin_bottom = 296.934
+text = "Unpause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+visible = false
+margin_left = 360.342
+margin_top = 306.51
+margin_right = 646.342
+margin_bottom = 354.51
+text = "Quit to menu loosing all progress "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 422.419
+margin_top = 90.7864
+margin_right = 549.419
+margin_bottom = 128.787
+
+[node name="Over" type="Label" parent="."]
+visible = false
+margin_left = 393.0
+margin_top = 247.0
+margin_right = 553.0
+margin_bottom = 306.0
+custom_fonts/font = SubResource( 1 )
+text = "Game Over"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="Over"]
+margin_left = -10.0
+margin_top = 59.0
+margin_right = 163.0
+margin_bottom = 114.0
+text = "Back to menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="Button" parent="Over"]
+margin_left = -10.0
+margin_top = 114.0
+margin_right = 163.0
+margin_bottom = 169.0
+text = "Restart game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scores" type="RichTextLabel" parent="Over"]
+margin_left = 218.0
+margin_right = 326.0
+margin_bottom = 169.0
+
+[node name="TotalCash" type="RichTextLabel" parent="Over"]
+margin_left = -156.0
+margin_top = 59.0
+margin_right = -10.0
+margin_bottom = 147.0
+
+[connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
+[connection signal="pressed" from="Unpause" to="." method="_on_Unpause_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Over/Menu" to="." method="_on_Menu_pressed"]
+[connection signal="pressed" from="Over/Restart" to="." method="_on_Restart_pressed"]

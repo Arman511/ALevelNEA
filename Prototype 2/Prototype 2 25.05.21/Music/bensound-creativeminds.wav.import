@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bensound-creativeminds.wav-53c09f91823ac85e8616e20bf7898c33.sample"
+
+[deps]
+
+source_file="res://Music/bensound-creativeminds.wav"
+dest_files=[ "res://.import/bensound-creativeminds.wav-53c09f91823ac85e8616e20bf7898c33.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
