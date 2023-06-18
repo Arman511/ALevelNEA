@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Roboto-Light.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 37
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.7818
+margin_top = -2.0
+margin_right = 1.78174
+margin_bottom = -2.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Money" type="RichTextLabel" parent="."]
+margin_left = 121.0
+margin_top = 55.0
+margin_right = 249.0
+margin_bottom = 100.0
+text = "Total Cash:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label1" type="Label" parent="."]
+visible = false
+margin_left = 405.0
+margin_top = 450.0
+margin_right = 541.0
+margin_bottom = 505.0
+text = "Goodbye"
+align = 1
+valign = 1
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 393.632
+margin_top = 383.365
+margin_right = 553.632
+margin_bottom = 419.365
+text = "Quit Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shop" type="Button" parent="."]
+margin_left = 393.169
+margin_top = 344.281
+margin_right = 553.169
+margin_bottom = 380.281
+text = "Open Shop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game" type="Button" parent="."]
+margin_left = 393.218
+margin_top = 268.88
+margin_right = 553.218
+margin_bottom = 304.88
+text = "Start Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scores" type="Button" parent="."]
+margin_left = 393.218
+margin_top = 305.691
+margin_right = 553.218
+margin_bottom = 341.691
+text = "Show scores"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 233.0
+margin_top = 116.0
+margin_right = 731.0
+margin_bottom = 161.0
+custom_fonts/font = SubResource( 1 )
+text = "Tank Shooter by Arman Shaikh"
+
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Shop" to="." method="_on_Shop_pressed"]
+[connection signal="pressed" from="Scores" to="." method="_on_Scores_pressed"]

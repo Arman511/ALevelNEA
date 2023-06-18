@@ -1,0 +1,96 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Settings.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.292908
+margin_bottom = 0.292908
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sound" type="Button" parent="."]
+anchor_right = 0.042
+margin_left = 318.0
+margin_top = 218.0
+margin_right = 595.904
+margin_bottom = 268.0
+text = "Sound is currently: On, Press to switch"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="."]
+margin_left = 332.707
+margin_top = 513.91
+margin_right = 620.707
+margin_bottom = 574.91
+text = "Save and Back to Menu"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 318.681
+margin_top = 151.27
+margin_right = 615.681
+margin_bottom = 165.27
+text = "Sensativity of Turret, Currently:"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 334.681
+margin_top = 284.27
+margin_right = 631.681
+margin_bottom = 298.27
+text = "Change on how you see the HUD in Game"
+
+[node name="Sens" type="HSlider" parent="."]
+margin_left = 318.681
+margin_top = 170.27
+margin_right = 634.681
+margin_bottom = 201.27
+min_value = 0.5
+max_value = 4.0
+step = 0.5
+value = 1.0
+tick_count = 4
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reset" type="Button" parent="."]
+margin_left = 325.707
+margin_top = 378.243
+margin_right = 639.707
+margin_bottom = 440.243
+text = "Reset Account details"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete" type="Button" parent="."]
+margin_left = 330.061
+margin_top = 445.253
+margin_right = 627.061
+margin_bottom = 512.253
+text = "Delete account"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hud" type="OptionButton" parent="."]
+margin_left = 328.0
+margin_top = 309.0
+margin_right = 643.0
+margin_bottom = 379.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Sound" to="." method="_on_Sound_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
+[connection signal="value_changed" from="Sens" to="." method="_on_Sens_value_changed"]
+[connection signal="pressed" from="Reset" to="." method="_on_Reset_pressed"]
+[connection signal="pressed" from="Delete" to="." method="_on_Delete_pressed"]
+[connection signal="item_selected" from="Hud" to="." method="_on_Hud_item_selected"]

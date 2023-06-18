@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/HUD.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Black.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/red.jpg" type="Texture" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, -1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProHUDAmmo" type="TextureProgress" parent="."]
+margin_left = 631.782
+margin_top = 66.2182
+margin_right = 906.782
+margin_bottom = 111.218
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ProHUDAmmo"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Current Ammo: "
+
+[node name="ProHUDHP" type="TextureProgress" parent="."]
+margin_left = 87.7217
+margin_top = 67.0591
+margin_right = 362.722
+margin_bottom = 112.059
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ProHUDHP"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Current Health: "
+
+[node name="Hud" type="Label" parent="."]
+margin_left = 47.0
+margin_top = 21.0
+margin_right = 833.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.14286, 1.3125 )
+
+[node name="Pause" type="Button" parent="."]
+margin_left = 895.555
+margin_top = 14.2952
+margin_right = 1002.55
+margin_bottom = 43.2952
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Unpause" type="Button" parent="."]
+margin_left = 359.398
+margin_top = 248.934
+margin_right = 645.398
+margin_bottom = 296.934
+text = "Unpasue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 360.342
+margin_top = 306.51
+margin_right = 646.342
+margin_bottom = 354.51
+text = "Quit to menu loosing all progress "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 428.776
+margin_top = 72.7755
+margin_right = 555.776
+margin_bottom = 110.776
+
+[connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
+[connection signal="pressed" from="Unpause" to="." method="_on_Unpause_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

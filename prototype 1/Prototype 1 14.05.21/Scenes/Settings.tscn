@@ -1,0 +1,173 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scenes/Settings.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Roboto-Light.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Roboto-Medium.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.292908
+margin_bottom = 0.292908
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sound" type="Button" parent="."]
+anchor_right = 0.042
+margin_left = 199.707
+margin_top = 135.88
+margin_right = 477.611
+margin_bottom = 185.88
+text = "Sound is currently: On, Press to switch"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 411.0
+margin_right = 678.0
+margin_bottom = 473.0
+rect_scale = Vector2( 0.568181, 1.09944 )
+custom_fonts/font = SubResource( 1 )
+text = "Save and Back to Menu"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 199.707
+margin_top = 90.5847
+margin_right = 496.707
+margin_bottom = 104.585
+text = "Sensativity of Turret, Currently:"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 199.707
+margin_top = 193.106
+margin_right = 496.707
+margin_bottom = 207.106
+text = "Change on how you see the HUD in Game"
+
+[node name="Sens" type="HSlider" parent="."]
+margin_left = 199.707
+margin_top = 103.286
+margin_right = 515.707
+margin_bottom = 134.286
+min_value = 0.5
+max_value = 4.0
+step = 0.5
+value = 1.0
+tick_count = 4
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reset" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 282.0
+margin_right = 718.0
+margin_bottom = 352.0
+rect_scale = Vector2( 0.524196, 0.888239 )
+custom_fonts/font = SubResource( 2 )
+text = "Reset Account details"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 344.0
+margin_right = 692.0
+margin_bottom = 417.0
+rect_scale = Vector2( 0.551122, 0.910187 )
+custom_fonts/font = SubResource( 3 )
+text = "Delete account"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hud" type="OptionButton" parent="."]
+margin_left = 200.0
+margin_top = 211.0
+margin_right = 691.0
+margin_bottom = 281.0
+rect_scale = Vector2( 0.552047, 1.01214 )
+custom_fonts/font = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 520.619
+margin_top = 193.106
+margin_right = 817.619
+margin_bottom = 207.106
+text = "Change on how you rotate player"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Movement" type="OptionButton" parent="."]
+margin_left = 521.0
+margin_top = 211.0
+margin_right = 1059.0
+margin_bottom = 281.0
+rect_scale = Vector2( 0.552047, 1.01214 )
+custom_fonts/font = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 520.619
+margin_top = 282.362
+margin_right = 817.619
+margin_bottom = 296.362
+text = "Change on how you fire"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fire" type="OptionButton" parent="."]
+margin_left = 521.0
+margin_top = 301.0
+margin_right = 1059.0
+margin_bottom = 378.0
+rect_scale = Vector2( 0.552047, 1.01214 )
+custom_fonts/font = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Sound" to="." method="_on_Sound_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
+[connection signal="value_changed" from="Sens" to="." method="_on_Sens_value_changed"]
+[connection signal="pressed" from="Reset" to="." method="_on_Reset_pressed"]
+[connection signal="pressed" from="Delete" to="." method="_on_Delete_pressed"]
+[connection signal="item_selected" from="Hud" to="." method="_on_Hud_item_selected"]
+[connection signal="item_selected" from="Movement" to="." method="_on_Movement_item_selected"]
+[connection signal="item_selected" from="Fire" to="." method="_on_Fire_item_selected"]
